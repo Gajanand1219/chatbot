@@ -1,5 +1,6 @@
 
-# FastAPI Chat Application with Azure OpenAI                                     https://chatbot-git-main-gajanan-deshmukhs-projects.vercel.app/
+# FastAPI Chat Application with Azure OpenAI                                                                                          
+## https://chatbot-git-main-gajanan-deshmukhs-projects.vercel.app/
 
 A RESTful API for managing chat sessions with Azure OpenAI integration, featuring persistent chat history using SQLite.
 
