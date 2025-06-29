@@ -39,7 +39,7 @@ function App() {
   
     setIsTyping(true);
     try {
-      const response = await axios.post("http://chatbot-backend-th1d.onrender.com/api/chat", {
+      const response = await axios.post("https://chatbot-backend-th1d.onrender.com/api/chat", {
         message: message,
         session_id: currentSession?.id
       }, {
@@ -83,7 +83,7 @@ function App() {
 
   const deleteSession = async (sessionId) => {
     try {
-      await axios.delete(`http://chatbot-backend-th1d.onrender.com/api/session/${sessionId}`);
+      await axios.delete(`https://chatbot-backend-th1d.onrender.com/api/session/${sessionId}`);
       if (currentSession && currentSession.id === sessionId) {
         setCurrentSession(null);
       }
