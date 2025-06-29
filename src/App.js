@@ -18,7 +18,7 @@ function App() {
 
   const fetchSessions = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/sessions");
+      const response = await axios.get("https://chatbot-backend-th1d.onrender.com/api/sessions");
       setSessions(response.data.sessions);
     } catch (error) {
       console.error("Error fetching sessions:", error);
@@ -27,7 +27,7 @@ function App() {
 
   const fetchSession = async (sessionId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/session/${sessionId}`);
+      const response = await axios.get(`https://chatbot-backend-th1d.onrender.com/api/session/${sessionId}`);
       setCurrentSession(response.data);
     } catch (error) {
       console.error("Error fetching session:", error);
@@ -39,7 +39,7 @@ function App() {
   
     setIsTyping(true);
     try {
-      const response = await axios.post("http://localhost:8000/api/chat", {
+      const response = await axios.post("http://chatbot-backend-th1d.onrender.com/api/chat", {
         message: message,
         session_id: currentSession?.id
       }, {
@@ -83,7 +83,7 @@ function App() {
 
   const deleteSession = async (sessionId) => {
     try {
-      await axios.delete(`http://localhost:8000/api/session/${sessionId}`);
+      await axios.delete(`http://chatbot-backend-th1d.onrender.com/api/session/${sessionId}`);
       if (currentSession && currentSession.id === sessionId) {
         setCurrentSession(null);
       }
