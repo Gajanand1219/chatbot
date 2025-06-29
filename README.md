@@ -1,4 +1,4 @@
-# chatbot_backend
+
 # FastAPI Chat Application with Azure OpenAI
 
 A RESTful API for managing chat sessions with Azure OpenAI integration, featuring persistent chat history using SQLite.
