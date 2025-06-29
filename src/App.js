@@ -82,9 +82,9 @@ function App() {
     setMessage("");
   };
 
-  const deleteSession = async (sessionId) => {
+const deleteSession = async (sessionId) => {
   try {
-    await axios.delete(`http://chatbot-backend-th1d.onrender.com/api/session/${sessionId}`);
+    await axios.delete(`https://chatbot-backend-th1d.onrender.com/api/session/${sessionId}`);
     if (currentSession && currentSession.id === sessionId) {
       setCurrentSession(null);
     }
@@ -93,6 +93,7 @@ function App() {
     console.error("Error deleting session:", error);
   }
 };
+
 
 
   const handleKeyPress = (e) => {
